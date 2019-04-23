@@ -144,7 +144,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             for x in self.img_files]
 
         # sort dataset by aspect ratio for rectangular training
-        self.rectangle = False
+        self.rectangle = True
         if self.rectangle:
             from PIL import Image
 
@@ -188,7 +188,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             cv2.cvtColor(img_hsv, cv2.COLOR_HSV2BGR, dst=img)
 
         h, w, _ = img.shape
-        img, ratio, padw, padh = letterbox(img, height=self.img_size, mode='square')
+        img, ratio, padw, padh = letterbox(img, height=self.img_size, mode='rect')
 
         # Load labels
         labels = []

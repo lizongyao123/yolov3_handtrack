@@ -127,7 +127,7 @@ def train(
     dataloader = DataLoader(dataset,
                             batch_size=batch_size,
                             num_workers=opt.num_workers,
-                            shuffle=True,
+                            shuffle=False,
                             pin_memory=True,
                             collate_fn=dataset.collate_fn)
 
