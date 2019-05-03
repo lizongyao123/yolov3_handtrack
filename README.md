@@ -26,6 +26,7 @@ Note if you don't download darknet53.conv.74 in weights folder, it will download
 ```bash
 $ python detect.py --cfg cfg/yolov3-spp.cfg --weights weights/yolov3-spp.weights --webcam
 ```
+<img src="https://user-images.githubusercontent.com/13127230/57130206-bdb82600-6dd3-11e9-805e-b0fac18125e4.png" width="600">
 
 # Egohand dataset preparation
 ## Download dataset & convert
@@ -105,7 +106,7 @@ $ python train.py --cfg cfg/yolov3-spp-egohands.cfg --data-cfg cfg/egohands-data
 ```
 Note if you don't downloaded darknet53.conv.74 in weights folder, it will download automatically when train.<br>
 Change Hyper-parameters by option. I trained with above option with RTX 2070 GPU, 273 epochs 14 hours and mAP was 0.962<br>
-You can resume train with --resume option, if terminated unfinished. <br>
+You can resume train with `--resume` option, if terminated unfinished. <br>
 You can plot training status with below commands.
 ```bash
 $ python
@@ -114,6 +115,7 @@ $ python
 >> exit()
 $ eog results.png
 ```
+<img src="https://user-images.githubusercontent.com/13127230/57130058-4c787300-6dd3-11e9-80db-07f269ec64d0.png" width="600">
 
 Results will be saved in weights/ folder, best.pt file is the best weights. <br>
 
@@ -121,7 +123,7 @@ Results will be saved in weights/ folder, best.pt file is the best weights. <br>
 ```bash
 python detect.py --cfg cfg/yolov3-spp-egohands.cfg --data-cfg cfg/egohands-dataset.cfg --weights weights/best.pt --webcam
 ```
-
+<img src="https://user-images.githubusercontent.com/13127230/57129982-10dda900-6dd3-11e9-913b-f8292d5f616a.png" width="600">
 # To Do
 - Hyper parameters tuning for better result
 - Use other dataset for more robust inferrence
