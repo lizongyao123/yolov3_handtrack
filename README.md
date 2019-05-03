@@ -130,6 +130,14 @@ I got about **15~18ms** inference time, approximately **50fps >**, with RTX 2070
 
 <img src="https://user-images.githubusercontent.com/13127230/57129982-10dda900-6dd3-11e9-913b-f8292d5f616a.png" width="600">
 
+# Reference
+- PyTorch YOLO v3<br>
+https://www.ultralytics.com<br>
+https://github.com/ultralytics/yolov3
+
+- EgoHand dataset download and label creation<br>
+https://github.com/victordibia/handtracking
+
 # To Do
 - Hyper parameters tuning for better result
 - Use other dataset for more robust inferrence
