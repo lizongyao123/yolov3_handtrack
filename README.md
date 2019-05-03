@@ -1,3 +1,6 @@
+# Hand tracking with PyTorch YOLO v3 + EgoHand dataset
+<img src="https://user-images.githubusercontent.com/13127230/57129982-10dda900-6dd3-11e9-913b-f8292d5f616a.png" width="600">
+
 # Note
 This project is based on PyTorch YOLOv3 software developed by Ultralytics LLC which has **GPL-3.0 license**.<br>
 I added explanations about how to train hand tracking and some patches for EgoHand dataset.<br>
@@ -130,4 +133,4 @@ I got about **15~18ms** inference time, approximately **50fps >**, with RTX 2070
 # To Do
 - Hyper parameters tuning for better result
 - Use other dataset for more robust inferrence
-- Please add issues if you found better way!!!
+- Please post issues if you found better way!!!
