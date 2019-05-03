@@ -123,7 +123,11 @@ Results will be saved in weights/ folder, best.pt file is the best weights. <br>
 ```bash
 python detect.py --cfg cfg/yolov3-spp-egohands.cfg --data-cfg cfg/egohands-dataset.cfg --weights weights/best.pt --webcam
 ```
+I got about **15~18ms** inference time, approximately **50fps >**, with RTX 2070 GPU.
+
 <img src="https://user-images.githubusercontent.com/13127230/57129982-10dda900-6dd3-11e9-913b-f8292d5f616a.png" width="600">
+
 # To Do
 - Hyper parameters tuning for better result
 - Use other dataset for more robust inferrence
+- Please add issues if you found better way!!!
