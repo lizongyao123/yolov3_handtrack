@@ -143,6 +143,19 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             x.replace('images', 'labels').replace('.bmp', '.txt').replace('.jpg', '.txt').replace('.png', '.txt')
             for x in self.img_files]
 
+        # JS edited for removing files with no label
+        img_files, label_files = [], []
+        for img_file, label_file in zip(self.img_files, self.label_files):
+            if not os.path.isfile(img_file) or not os.path.isfile(label_file):
+                continue
+            img_files.append(img_file)
+            label_files.append(label_file)
+        print('%d -> %d img and label files...' % (len(self.img_files), len(img_files)))
+        self.img_files = img_files
+        self.label_files = label_files
+        n = len(self.img_files)
+        # JS edit end
+
         # Rectangular Training  https://github.com/ultralytics/yolov3/issues/232
         self.train_rectangular = False
         if self.train_rectangular:

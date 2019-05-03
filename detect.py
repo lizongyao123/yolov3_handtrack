@@ -126,6 +126,7 @@ if __name__ == '__main__':
     parser.add_argument('--img-size', type=int, default=416, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.5, help='object confidence threshold')
     parser.add_argument('--nms-thres', type=float, default=0.5, help='iou threshold for non-maximum suppression')
+    parser.add_argument('--webcam', action='store_true')
     opt = parser.parse_args()
     print(opt)
 
@@ -137,5 +138,6 @@ if __name__ == '__main__':
             images=opt.images,
             img_size=opt.img_size,
             conf_thres=opt.conf_thres,
-            nms_thres=opt.nms_thres
+            nms_thres=opt.nms_thres,
+            webcam = opt.webcam
         )
